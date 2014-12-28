@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Citer",
+    "description": "Citing text shouldn't be hard for quick tasks. Make it easy with Citer!",
+    "version": "0.0.1",
+    "permissions": [
+        "tabs",
+        "http://*/",
+        "activeTab",
+        "contextMenus",
+        "clipboardWrite"
+
+    ],
+    "content_scripts": [
+        {
+            "matches": ["http://*/*"],
+            "js": ["content_script.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["bower_components/jquery-2.1.0.min/index.js", "background.js"]
+    }
+}
